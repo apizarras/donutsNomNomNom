@@ -31,22 +31,34 @@ for (i=0; i<randomDonut.length; i++) {
 }    
 document.getElementById("word-To-Use").innerHTML = currentWord.join(" ");
 
+
 //recognize and store value of user input
 var userLetter = [];
 document.onkeyup = function(event) {
     var userLetter = event.key;
 }
+document.getElementById("userLetterGuess").innerHTML = userLetter;
+
 //compare to randomly generated word and identify where that letter falls in the word
+//does the letter exist within the randomDonut word?
+//if it does, where in the word is it?
+//display matching letter in correct space within the word
+function whereLetter (letter) {
+    var letterSelected = 0;
 for (var j = 0; j <randomDonut.length; j++) {
-    if (randomDonut[j] === userLetter) {
-        userLetter.push[j];
+    if (randomDonut[j].selected) {
+        letterSelected++;
     }
 }
+return letterSelected.charAt[j];
+}
 
-//display matching letter
 
 //deal with letter that is guessed incorrectly
+
 
 //determine if user won or lost
 
 //update stats on user wins and losses
+
+//reset game

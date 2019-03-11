@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css"> 
+
+    <title>DonutGame</title>
+</head>
+<body class="bg-color">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <!--free images from http://www.pngmart.com-->
+                <img src="./assets/images/Donuts-PNG-Photos.png" alt="Donuts" class="img-responsive img-size mx-auto d-block">
+                    <div class="carousel-caption">
+                    <h1 class="text-dark bg-white border border-secondary border-radius center-title">NAME A TYPE OF DONUT</h1>
+                    </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <h2 class="col-sm text-center">Press Any Letter To Get Started!</h2>
+        </div>
+        
+        <div class="row">
+            <!--something here for the blanks that make the word-->
+            <div id="word-To-Use" class="display-1 mx-auto"></div>
+            <p id="userLetterGuess"></p>
+           
+            
+        </div>
+        
+        <div class="row">
+            <div class="col-sm">
+                <div class="container text-center">
+                    <img src="./assets/images/kisspng-cloud-computing-drawing-clip-art-cartoon-cloud-5abfe0206e8a90.1083390915225241924528.png" alt="Cloud" class="img-size2">
+                    <p id="num-Guesses-Left"></p>
+                    <p>Number of Guesses Left</p>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="container text-center">
+                <img src="./assets/images/kisspng-cloud-computing-drawing-clip-art-cartoon-cloud-5abfe0206e8a90.1083390915225241924528.png" alt="Cloud" class="img-size2">
+                <p id-"lettersGuessed">letters guessed</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <div class="container text-center">
+                    <img src="./assets/images/kisspng-cloud-computing-drawing-clip-art-cartoon-cloud-5abfe0206e8a90.1083390915225241924528.png" alt="Cloud" class="img-size2">
+                    <p id="wins">Count of Wins</p>
+                    <p id="losses">Count of Losses</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="./assets/javascript/game.js"></script>
+</body>
+</html>

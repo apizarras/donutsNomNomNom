@@ -17,3 +17,8 @@
 .bg-color {
     background: lightblue;
 }
+
+.stat-colors {
+    color: black;
+    font-weight: 500;
+}

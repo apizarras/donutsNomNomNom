@@ -8,9 +8,11 @@ var guessedLetters=[];
 var blanksForLetters = [];
 var correctGuesses=0;
 
-//start game, commented out for testing functions
+//start game
 function start() {
-wordComplete();
+    document.getElementById("num-Guesses-Left").innerHTML = numTries;
+    console.log(numTries);
+
 //pick a random donut from the donuts array
 var randomDonut = donuts[Math.floor(Math.random() * donuts.length)];
 console.log(randomDonut);
@@ -31,7 +33,7 @@ emptyLetters(randomDonut);
 
 //display stats
 document.getElementById("wins").innerHTML = wins;
-document.getElementById("num-Guesses-Left").innteHTML = numTries;
+
 document.getElementById("lettersGuessed").innerHTML = guessedLetters;
 
 //store user key pressed
@@ -47,6 +49,7 @@ console.log(guess);
         numTries--;
         console.log(numTries);
         document.getElementById("num-Guesses-Left").innerHTL = numTries;
+        youLost();
         restart();
    }
 
@@ -61,20 +64,26 @@ console.log(guess);
    }
 };
 
+//determine whether or not the user has guessed all the letters in the word and won the game
 function wordComplete () {
     console.log(randomDonutLength);
     if (randomDonutLength == correctGuesses) {
     wins++;
     document.getElementById("you-won").innerHTML = "<h2>You've Won!!!</h1>";
+    document.getElementById("wins").innerHTML = wins;
+    restart();
     }
 }
+function youLost() {
+    if(numTries == 0) {
+        document.getElementById("you-won").innerHTML = "<h2>Sorry, Game Over...</h2>";
+    }
+}
+
 function restart() {
-    if(numTries <=0) {
-        wins++;
-        document.getElementById("you-won").innerHTML.textContent = "You've Won!!!";
-    document.getElementById("wins").innerHTML = wins;
+    if(randomDonutLength == correctGuesses) {    
     start();
-    } else if (numTries < 0) {
+    } else if (numTries <= 0) {
         start();
     }
     }

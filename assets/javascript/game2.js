@@ -1,5 +1,5 @@
 //array for words to guess
-const donuts = ["cake", "sugar", "cronut", "eclair", "jelly", "fritter", "crueller"];
+const donuts = ["cake", "sugar", "cronut", "eclair", "chocolate", "iced"];
 
 //Global Variables
 var numTries = 10;
@@ -9,7 +9,13 @@ var blanksForLetters = [];
 var correctGuesses=0;
 
 //start game
+// function reset() {
+//     numTries = 0;
+//     guessedLetters = [];
+//     document.getElementById("you-won").style.visibility = "hidden";
+// }
 function start() {
+    //reset();
     document.getElementById("num-Guesses-Left").innerHTML = numTries;
     console.log(numTries);
 
@@ -48,7 +54,7 @@ console.log(guess);
         console.log(guessedLetters);
         numTries--;
         console.log(numTries);
-        document.getElementById("num-Guesses-Left").innerHTL = numTries;
+        document.getElementById("num-Guesses-Left").innerHTML = numTries;
         youLost();
         restart();
    }
@@ -69,25 +75,24 @@ function wordComplete () {
     console.log(randomDonutLength);
     if (randomDonutLength == correctGuesses) {
     wins++;
-    document.getElementById("you-won").innerHTML = "<h2>You've Won!!!</h1>";
+    document.getElementById("you-won").innerHTML = "<h2>You've Won!!! There is a new word available. Type a letter to begin guessing.</h1>";
     document.getElementById("wins").innerHTML = wins;
     restart();
     }
 }
 function youLost() {
     if(numTries == 0) {
-        document.getElementById("you-won").innerHTML = "<h2>Sorry, Game Over...</h2>";
+        document.getElementById("you-won").innerHTML = "<h2>Sorry, Game Over...There is a new word available. Type a letter to begin guessing.</h2>";
     }
 }
 
 function restart() {
-    if(randomDonutLength == correctGuesses) {    
+    if(randomDonutLength == correctGuesses) {
     start();
-    } else if (numTries <= 0) {
+    } else if(numTries <= 0) {
         start();
     }
-    }
-
+}
 }
 
 start();

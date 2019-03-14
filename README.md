@@ -4,7 +4,8 @@
 
 3.10.19 psuedo code javascript
 
-3.13.19 fixed you've own message to appear
-fixed display of number of wins
-fixed display of number of guesses left
+3.13.19 you've own message to appear
+display of number of wins
+display of number of guesses left
+
 
